@@ -4,8 +4,86 @@ body {
   background-color: #ffffff;
 }
 
+.container {
+  max-width: 80ch;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav {
+  background-color: #00ffff;
+  color: #ffffff;
+}
+
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo h1 {
+  margin: 0;
+  display: inline-block;
+}
+
+nav .logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+nav .menu {
+  display: none;
+}
+
+nav .menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav .menu li {
+  display: inline-block;
+}
+
+nav .menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+nav .menu a:hover {
+  background-color: #ccffff;
+  color: #333333;
+}
+
+nav .hamburger {
+  display: block;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav .logo h1 {
+    display: none;
+  }
+  nav .menu {
+    display: block;
+  }
+  nav .menu ul {
+    display: none;
+  }
+  nav .menu li {
+    display: block;
+  }
+}
+
 h1, h2 {
-  text-align: center;
+  text-align: left;
   color: #444444;
 }
 

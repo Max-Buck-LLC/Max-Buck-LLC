@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css">
   <title>Buck Software</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-
 <body>
+  <nav>
+    <div class="container">
+      <div class="logo">
+        <img src="logo.png" alt="Buck Software logo">
+        <h1>Buck Software</h1>
+      </div>
+      <div class="menu">
+        <button class="hamburger">&#9776;</button>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <div class="container">
-    <h1>Welcome to Buck Software</h1>
-    <p>We specialize in custom software development for web and mobile, data management, AI solutions, and ETL pipeline work. Let's talk and see if our team can meet your needs.</p>
-    <h2>About Us</h2>
+    <h2 id="about">About Us</h2>
     <p>Buck Software was founded by Max Buck, a graduate of the Computer Science program at Ohio State University with over a decade of experience building software for companies of all sizes. Working for small companies and start-ups has taught Max the importance of weighing business needs with software design decisions.</p>
-    <h2>Our Services</h2>
+    <h2 id="services">Our Services</h2>
     <ul>
       <li>Custom software development for web and mobile</li>
       <li>Data management</li>
@@ -20,13 +34,15 @@
       <li>CI, CD, and infrastructure management</li>
       <li>DevOps and migration</li>
     </ul>
-    <h2>Portfolio</h2>
+    <h2 id="portfolio">Portfolio</h2>
     <div id="portfolio">
-      <!-- Add portfolio logos here -->
+      <img src="logo.png" alt="Portfolio company logo">
+      <img src="logo.png" alt="Portfolio company logo">
+      <img src="logo.png" alt="Portfolio company logo">
     </div>
-    <h2>Contact Us</h2>
+    <h2 id="contact">Contact Us</h2>
     <p>Email: max@buck.software</p>
     <p>Phone: 216.536.8676</p>
-  </body>
   </div>
+</body>
 </html>
