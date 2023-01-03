@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #444444;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+#portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#portfolio img {
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+}
+
+#portfolio img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
