@@ -1,48 +1,146 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Buck Software</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-  <nav>
+<html lang="en">
+  <head>
+    <title>Buck Software</title>
+    <meta
+      name="description"
+      content="Buck Software. Expert full stack development and applied AI solutions."
+    />
+
+    <!-- Twitter data -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Buck Software" />
+    <meta
+      name="twitter:description"
+      content="Buck Software. Expert full stack development and applied AI solutions."
+    />
+    <meta name="twitter:creator" content="@max_buck" />
+    <meta
+      name="twitter:image"
+      content="https://www.buck.software/img/headshot.png"
+    />
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Buck Software" />
+    <meta property="og:url" content="https://www.buck.sofware/" />
+    <meta
+      property="og:image"
+      content="https://www.buck.software/img/headshot.png"
+    />
+    <meta
+      property="og:description"
+      content="Buck Software. Expert full stack development and applied AI solutions."
+    />
+    <meta property="og:site_name" content="Buck Software" />
+
+    <!-- Favicon/theme -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/img/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/img/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link rel="manifest" href="/img/manifest.json" />
+    <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#24d05a" />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <meta name="msapplication-config" content="/img/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
     <div class="container">
-      <div class="logo">
-        <img src="logo.png" alt="Buck Software logo">
-        <h1>Buck Software</h1>
+      <div class="links">
+        <a href="http://twitter.com/max_buck">twitter</a>
+        <a href="mailto:max@buck.software">email</a>
+        <a href="http://github.com/buckmaxwell">github</a>
+        <a href="https://www.linkedin.com/in/max-buck">linkedin</a>
       </div>
-      <div class="menu">
-        <button class="hamburger">&#9776;</button>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+      <div class="dark-mode-toggler">
+        <input type="checkbox" id="toggler" />
+        <label for="toggler" aria-label="Toggler for Dark Mode"></label>
+      </div>
+      <div class="links-and-toggler"></div>
+      <div class="header-section">
+        <div class="header-frame">
+          <h1>Buck Software</h1>
+          <h2>
+            Your technical partner for accelerated full stack development and
+            applied AI.
+          </h2>
+        </div>
+        <div class="img-frame">
+          <img id="propic" src="img/buck4.png" alt="" />
+        </div>
+      </div>
+      <div class="bio">
+
+<form action="https://formspree.io/your@email.com" method="POST">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="user_name" />
+  <label for="mail">E-mail:</label>
+  <input type="email" id="mail" name="user_mail" />
+  <label for="msg">Message:</label>
+  <textarea id="msg" name="user_message"></textarea>
+  <button type="submit">Send your message</button>
+  <input type="hidden" name="_next" value="/thank-you" />
+  <input
+    type="hidden"
+    name="_subject"
+    value="New submission from contact form"
+  />
+  <input type="hidden" name="_cc" value="another-email@email.com" />
+</form>
+
+
+
+
+        <p>
+          Hi, I'm Max. I am passionate about development and have had the
+          opportunity to work with a wide range of companies, from large
+          corporations to startups, across a variety of stacks. I am grateful
+          for the relationships I have built throughout my career, and I rely on
+          them to help me provide the best possible service to our clients.
+        </p>
+        <p>
+          I am a graduate of Ohio State University, where I earned my degree in
+          Computer Science. Since then, I have worked at a number of companies,
+          including Chase, Battelle Memorial Institute, SafeChain, Quill.org,
+          AudioHeads, Aetna Integrated Services, CoverMyMeds, and Tandem. In
+          addition, I have been the lead organizer for GiveBackHack Columbus for
+          the past three years.
+        </p>
+        <p>
+          Whether or not we end up working together, I would love the
+          opportunity to chat more and learn more about your needs. Please don't
+          hesitate to reach out if you have any questions or would like to
+          discuss your software development goals further. I look forward to
+          connecting with you!
+        </p>
       </div>
     </div>
-  </nav>
-  <div class="container">
-    <h2 id="about">About Us</h2>
-    <p>Buck Software was founded by Max Buck, a graduate of the Computer Science program at Ohio State University with over a decade of experience building software for companies of all sizes. Working for small companies and start-ups has taught Max the importance of weighing business needs with software design decisions.</p>
-    <h2 id="services">Our Services</h2>
-    <ul>
-      <li>Custom software development for web and mobile</li>
-      <li>Data management</li>
-      <li>AI solutions</li>
-      <li>ETL pipeline work</li>
-      <li>CI, CD, and infrastructure management</li>
-      <li>DevOps and migration</li>
-    </ul>
-    <h2 id="portfolio">Portfolio</h2>
-    <div id="portfolio">
-      <img src="logo.png" alt="Portfolio company logo">
-      <img src="logo.png" alt="Portfolio company logo">
-      <img src="logo.png" alt="Portfolio company logo">
-    </div>
-    <h2 id="contact">Contact Us</h2>
-    <p>Email: max@buck.software</p>
-    <p>Phone: 216.536.8676</p>
-  </div>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
+

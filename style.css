@@ -1,138 +1,287 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --gray: #8b8b8b;
+  --highlight: #e5ffc3;
+  --red: #e4002b;
+  --green: #24d05a;
+  --pink: #eb4888;
+  --blue: #10a2f5;
+  --yellow: #e9bc3f;
+  --off-white: #f5f5f5;
+  --off-black: #1a1a1a;
+  --crimson: #880009;
+}
+
+html,
 body {
-  font-family: Arial, sans-serif;
-  color: #333333;
-  background-color: #ffffff;
-}
-
-.container {
-  max-width: 80ch;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-nav {
-  background-color: #00ffff;
-  color: #ffffff;
-}
-
-nav .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-nav .logo h1 {
-  margin: 0;
-  display: inline-block;
-}
-
-nav .logo img {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-}
-
-nav .menu {
-  display: none;
-}
-
-nav .menu ul {
-  list-style: none;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
-nav .menu li {
-  display: inline-block;
-}
-
-nav .menu a {
+/* form label and input, modern styling */
+label {
   display: block;
-  padding: 10px;
-  text-decoration: none;
-  color: #ffffff;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
-nav .menu a:hover {
-  background-color: #ccffff;
-  color: #333333;
-}
-
-nav .hamburger {
+input {
   display: block;
-  background: none;
-  border: none;
-  color: #ffffff;
-  font-size: 24px;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: 1px solid var(--gray);
+  border-radius: 0.25rem;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: 1px solid var(--gray);
+  border-radius: 0.25rem;
+}
+
+input:focus {
+  outline: 2px solid var(--blue);
+  outline-offset: 0.25rem;
+}
+
+
+body,
+button {
+  background: var(--off-white);
+  color: var(--off-black);
+  font-family: "Open Sans", sans-serif;
+}
+
+::selection {
+  background-color: var(--highlight);
+  color: var(--off-black);
+}
+
+body.dark-mode,
+body.dark-mode button,
+body.dark-mode .go-home,
+button.dark-mode,
+button.dark-mode button {
+  background: var(--off-black);
+  color: var(--off-white);
+}
+
+button {
+  width: 120px;
+  height: 30px;
+  border: 2px solid var(--gray);
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: var(--gray);
+  font-size: 1rem;
+  overflow: auto;
+  transition: 0.4s ease all;
+}
+button:hover {
+  background: rgba(150, 151, 156, 0.1);
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  nav .logo h1 {
-    display: none;
-  }
-  nav .menu {
-    display: block;
-  }
-  nav .menu ul {
-    display: none;
-  }
-  nav .menu li {
-    display: block;
+.container {
+  margin: 50px auto;
+  padding: 5px;
+  max-width: 650px;
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
   }
 }
 
-h1, h2 {
-  text-align: left;
-  color: #444444;
+.header-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.header-frame {
+  max-width: 350px;
+}
+
+.go-home {
+  position: fixed;
+  top: 5px;
+  left: 20px;
+  padding: 5px 5px 5px 0;
+  background: var(--white);
+  box-sizing: border-box;
+}
+
+.links-and-toggler {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  height: 35px;
+  width: 100%;
+  background-color: var(--crimson);
+  z-index: 6;
+}
+
+.dark-mode-toggler {
+  position: fixed;
+  top: 5px;
+  right: 20px;
+  z-index: 7;
+}
+.dark-mode-toggler label {
+  position: relative;
+}
+.dark-mode-toggler input[type="checkbox"] {
+  display: none;
+}
+.dark-mode-toggler input[type="checkbox"] + label::before {
+  content: "";
+  display: block;
+  height: 21px;
+  width: 45px;
+  background: var(--white);
+  border: 2px solid var(--gray);
+  border-radius: 15px;
+  position: absolute;
+  top: 0px;
+  left: -46px;
+}
+.dark-mode-toggler input[type="checkbox"] + label::after {
+  content: "";
+  display: block;
+  height: 15px;
+  width: 15px;
+  background: var(--gray);
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: -45px;
+  transition: all 0.4s ease-in;
+}
+.dark-mode-toggler input[type="checkbox"]:checked + label::before {
+  background: var(--black);
+  border: 2px solid var(--white);
+}
+.dark-mode-toggler input[type="checkbox"]:checked + label::after {
+  left: -19px;
+  background: var(--black);
+  border: 2px solid var(--white);
+  transition: all 0.4s ease-in;
 }
 
 h1 {
-  font-size: 36px;
-  margin: 20px 0;
-}
-
-h2 {
-  font-size: 24px;
-  margin: 10px 0;
-}
-
-p {
-  margin: 10px 0;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
+  font-weight: 400;
   margin: 0;
 }
 
-li {
-  margin: 10px 0;
-  font-size: 16px;
+h2 {
+  color: var(--gray);
+  font-weight: 300;
+  margin: 0 0 0.5em 0;
 }
 
-#portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+a {
+  color: var(--gray);
+}
+a:hover {
+  font-weight: bold;
 }
 
-#portfolio img {
-  width: 150px;
-  height: 150px;
-  margin: 20px;
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
 }
 
-#portfolio img:hover {
-  transform: scale(1.1);
-  cursor: pointer;
+thead tr {
+  border-bottom: 3px solid var(--black);
 }
 
-.container {
-  max-width: 80ch;
-  margin: 0 auto;
-  padding: 0 20px;
+tbody tr:not(:last-child) {
+  border-bottom: 2px solid var(--gray);
+}
+
+tr td:nth-child(1) {
+  padding: 20px;
+  padding-left: 0;
+  font-weight: bold;
+}
+
+tr td:nth-child(2) {
+  text-align: right;
+}
+
+br {
+  display: block;
+  content: "";
+  margin-bottom: 15px;
+}
+
+.img-frame {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 0 10px 0;
+  border-radius: 0%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  overflow: hidden;
+}
+.img-frame img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 100%;
+}
+
+.links {
+  margin-top: 5px;
+  margin-left: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 7;
+}
+.links a:not(:last-child) {
+  padding: 0 12px 0 0;
+}
+
+@media (max-width: 600px) {
+  .links {
+    text-align: center;
+  }
+}
+
+.toggler {
+  margin: 25px 0;
+}
+.toggler .show {
+  border-color: var(--pink);
+  color: var(--pink);
+}
+@media (max-width: 600px) {
+  .toggler {
+    text-align: center;
+  }
+  .toggler button {
+    margin: 5px;
+  }
+}
+
+.bio {
+  display: none;
+  line-height: 1.6;
+  display: block;
+  margin-top: 20px;
 }
