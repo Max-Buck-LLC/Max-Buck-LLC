@@ -10,7 +10,7 @@
   --yellow: #e9bc3f;
   --off-white: #f5f5f5;
   --off-black: #1a1a1a;
-  --crimson: #880009;
+  --dark-navy: #000022;
 }
 
 html,
@@ -21,7 +21,9 @@ body {
 }
 
 body,
-button, input, textarea {
+button,
+input,
+textarea {
   background: var(--off-white);
   color: var(--off-black);
   font-family: "Open Sans", sans-serif;
@@ -55,7 +57,7 @@ button {
   transition: 0.4s ease all;
 }
 button:hover {
-  background: rgba(150, 151, 156, 0.1);
+  /*background: rgba(150, 151, 156, 0.1);*/
   cursor: pointer;
 }
 
@@ -96,7 +98,7 @@ button:hover {
   right: 0px;
   height: 35px;
   width: 100%;
-  background-color: var(--crimson);
+  background-color: var(--dark-navy);
   z-index: 6;
 }
 
@@ -243,19 +245,33 @@ br {
 @media (max-width: 600px) {
   .toggler {
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5px;
   }
   .toggler button {
-    margin: 5px;
+    flex-shrink: 3;
+    flex-grow: 3;
   }
 }
 
 .tab {
   display: none;
   line-height: 1.6;
-  /*display: block;*/
   margin-top: 20px;
 }
 
 .tab.show {
+  display: block;
+}
+
+.services {
+  display: none;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+.services.show {
   display: block;
 }

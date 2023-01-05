@@ -97,9 +97,9 @@
       </div>
       <div class="tab-switcher">
         <div class="toggler">
-          <button id="about" class="show">About</button>
-          <button id="services">Services</button>
-          <button id="contact">Contact Us</button>
+          <button id="about" class="maintabs show">About</button>
+          <button id="services" class="maintabs">Services</button>
+          <button id="contact" class="maintabs">Contact Us</button>
         </div>
 
         <div class="tab about show">
@@ -126,6 +126,14 @@
             to connecting with you!
           </p>
         </div>
+        <div class="tab services">
+          <div class="toggler">
+            <button id="full-stack" class="servicetab show">Full Stack Development</button>
+            <button id="ai" class="servicetab">Applied AI</button>
+          </div>
+          <div class="services full-stack show">full stack</div>
+          <div class="services ai">ai</div>
+        </div>
         <div class="tab contact">
           <form
             class="contact2-form"
@@ -133,29 +141,15 @@
             method="POST"
           >
             <div class="wrap-input2" data-validate="Name is required">
-              <input
-                class="input2"
-                type="text"
-                id="name"
-                name="user_name"
-              />
+              <input class="input2" type="text" id="name" name="user_name" />
               <span class="focus-input2" data-placeholder="NAME"></span>
             </div>
             <div class="wrap-input2">
-              <input
-                class="input2"
-                type="email"
-                id="mail"
-                name="user_mail"
-              />
+              <input class="input2" type="email" id="mail" name="user_mail" />
               <span class="focus-input2" data-placeholder="EMAIL"></span>
             </div>
             <div class="wrap-input2">
-              <textarea
-                class="input2"
-                id="msg"
-                name="user_message"
-              ></textarea>
+              <textarea class="input2" id="msg" name="user_message"></textarea>
               <span class="focus-input2" data-placeholder="MESSAGE"></span>
             </div>
             <button type="submit">Send your message</button>

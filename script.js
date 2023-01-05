@@ -60,7 +60,8 @@ function setPhoto() {
 /* Tab Toggles */
 
 function setTabEventListener() {
-  Array.from(document.getElementsByTagName("button")).forEach((e) => {
+  // get element by class and tag name
+  Array.from(document.getElementsByClassName("maintabs")).forEach((e) => {
     e.addEventListener("click", tabToggle);
   });
 }
