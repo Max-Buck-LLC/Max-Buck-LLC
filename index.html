@@ -66,6 +66,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./form.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
 
@@ -94,53 +95,81 @@
           <img id="propic" src="img/buck4.png" alt="" />
         </div>
       </div>
-      <div class="bio">
+      <div class="tab-switcher">
+        <div class="toggler">
+          <button id="about" class="show">About</button>
+          <button id="services">Services</button>
+          <button id="contact">Contact Us</button>
+        </div>
 
-<form action="https://formspree.io/your@email.com" method="POST">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="user_name" />
-  <label for="mail">E-mail:</label>
-  <input type="email" id="mail" name="user_mail" />
-  <label for="msg">Message:</label>
-  <textarea id="msg" name="user_message"></textarea>
-  <button type="submit">Send your message</button>
-  <input type="hidden" name="_next" value="/thank-you" />
-  <input
-    type="hidden"
-    name="_subject"
-    value="New submission from contact form"
-  />
-  <input type="hidden" name="_cc" value="another-email@email.com" />
-</form>
-
-
-
-
-        <p>
-          Hi, I'm Max. I am passionate about development and have had the
-          opportunity to work with a wide range of companies, from large
-          corporations to startups, across a variety of stacks. I am grateful
-          for the relationships I have built throughout my career, and I rely on
-          them to help me provide the best possible service to our clients.
-        </p>
-        <p>
-          I am a graduate of Ohio State University, where I earned my degree in
-          Computer Science. Since then, I have worked at a number of companies,
-          including Chase, Battelle Memorial Institute, SafeChain, Quill.org,
-          AudioHeads, Aetna Integrated Services, CoverMyMeds, and Tandem. In
-          addition, I have been the lead organizer for GiveBackHack Columbus for
-          the past three years.
-        </p>
-        <p>
-          Whether or not we end up working together, I would love the
-          opportunity to chat more and learn more about your needs. Please don't
-          hesitate to reach out if you have any questions or would like to
-          discuss your software development goals further. I look forward to
-          connecting with you!
-        </p>
+        <div class="tab about show">
+          <p>
+            Hi, I'm Max. I am passionate about development and have had the
+            opportunity to work with a wide range of companies, from large
+            corporations to startups, across a variety of stacks. I am grateful
+            for the relationships I have built throughout my career, and I rely
+            on them to help me provide the best possible service to our clients.
+          </p>
+          <p>
+            I am a graduate of Ohio State University, where I earned my degree
+            in Computer Science. Since then, I have worked at a number of
+            companies, including Chase, Battelle Memorial Institute, SafeChain,
+            Quill.org, AudioHeads, Aetna Integrated Services, CoverMyMeds, and
+            Tandem. In addition, I have been the lead organizer for GiveBackHack
+            Columbus for the past three years.
+          </p>
+          <p>
+            Whether or not we end up working together, I would love the
+            opportunity to chat more and learn more about your needs. Please
+            don't hesitate to reach out if you have any questions or would like
+            to discuss your software development goals further. I look forward
+            to connecting with you!
+          </p>
+        </div>
+        <div class="tab contact">
+          <form
+            class="contact2-form"
+            action="https://example.com/your@email.com"
+            method="POST"
+          >
+            <div class="wrap-input2" data-validate="Name is required">
+              <input
+                class="input2"
+                type="text"
+                id="name"
+                name="user_name"
+              />
+              <span class="focus-input2" data-placeholder="NAME"></span>
+            </div>
+            <div class="wrap-input2">
+              <input
+                class="input2"
+                type="email"
+                id="mail"
+                name="user_mail"
+              />
+              <span class="focus-input2" data-placeholder="EMAIL"></span>
+            </div>
+            <div class="wrap-input2">
+              <textarea
+                class="input2"
+                id="msg"
+                name="user_message"
+              ></textarea>
+              <span class="focus-input2" data-placeholder="MESSAGE"></span>
+            </div>
+            <button type="submit">Send your message</button>
+            <input type="hidden" name="_next" value="/thank-you" />
+            <input
+              type="hidden"
+              name="_subject"
+              value="New submission from contact form"
+            />
+            <input type="hidden" name="_cc" value="another-email@email.com" />
+          </form>
+        </div>
       </div>
     </div>
     <script src="./script.js"></script>
   </body>
 </html>
-

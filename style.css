@@ -20,40 +20,8 @@ body {
   padding: 0;
 }
 
-/* form label and input, modern styling */
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-
-input {
-  display: block;
-  width: 100%;
-  padding: 0.5rem;
-  font-size: 1.2rem;
-  border: 1px solid var(--gray);
-  border-radius: 0.25rem;
-}
-
-textarea {
-  display: block;
-  width: 100%;
-  padding: 0.5rem;
-  font-size: 1.2rem;
-  border: 1px solid var(--gray);
-  border-radius: 0.25rem;
-}
-
-input:focus {
-  outline: 2px solid var(--blue);
-  outline-offset: 0.25rem;
-}
-
-
 body,
-button {
+button, input, textarea {
   background: var(--off-white);
   color: var(--off-black);
   font-family: "Open Sans", sans-serif;
@@ -68,7 +36,9 @@ body.dark-mode,
 body.dark-mode button,
 body.dark-mode .go-home,
 button.dark-mode,
-button.dark-mode button {
+button.dark-mode button,
+body.dark-mode input,
+body.dark-mode textarea {
   background: var(--off-black);
   color: var(--off-white);
 }
@@ -279,9 +249,13 @@ br {
   }
 }
 
-.bio {
+.tab {
   display: none;
   line-height: 1.6;
-  display: block;
+  /*display: block;*/
   margin-top: 20px;
+}
+
+.tab.show {
+  display: block;
 }
