@@ -248,8 +248,22 @@
               <span class="focus-input2" data-placeholder="NAME"></span>
             </div>
             <div class="wrap-input2">
-              <input class="input2" type="email" id="mail" name="user_mail" />
+              <input
+                class="input2"
+                type="email"
+                id="mail"
+                name="user_mail"
+              />
               <span class="focus-input2" data-placeholder="EMAIL"></span>
+            </div>
+            <div class="wrap-input2">
+              <input
+                class="input2"
+                type="phone"
+                id="phone"
+                name="user_phone"
+              />
+              <span class="focus-input2" data-placeholder="PHONE"></span>
             </div>
             <div class="wrap-input2">
               <textarea class="input2" id="msg" name="user_message"></textarea>
@@ -262,7 +276,6 @@
               name="_subject"
               value="New submission from contact form"
             />
-            <input type="hidden" name="_cc" value="another-email@email.com" />
           </form>
         </div>
       </div>
@@ -272,6 +285,8 @@
         <p>© 2023 Max Buck, LLC & Buck Software. All rights reserved.</p>
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="./script.js"></script>
+    <script src="./form.js"></script>
   </body>
 </html>
