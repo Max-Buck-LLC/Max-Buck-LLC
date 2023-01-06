@@ -63,6 +63,10 @@
     />
 
     <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css?family=Open+Sans"
       rel="stylesheet"
     />
@@ -70,7 +74,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
 
-  <body>
+  <body class="dark-mode">
     <div class="container">
       <div class="links">
         <a href="http://twitter.com/max_buck">twitter</a>
@@ -79,7 +83,7 @@
         <a href="https://www.linkedin.com/in/max-buck">linkedin</a>
       </div>
       <div class="dark-mode-toggler">
-        <input type="checkbox" id="toggler" />
+        <input type="checkbox" id="toggler" checked />
         <label for="toggler" aria-label="Toggler for Dark Mode"></label>
       </div>
       <div class="links-and-toggler"></div>
@@ -127,15 +131,113 @@
           </p>
         </div>
         <div class="tab services">
-          <div class="toggler">
-            <button id="full-stack" class="servicetab show">Full Stack Development</button>
-            <button id="ai" class="servicetab">Applied AI</button>
+          <div class="aside">
+            <p>
+              We offer a wide range of services, including custom software
+              development, mobile app development, cloud architecture and
+              migration, and artificial intelligence solutions. No matter what
+              your project entails, we have the expertise and experience to help
+              bring it to life. We are always eager to start a conversation and
+              see how we can help, so don't hesitate to get in touch. Even if we
+              don't end up working together, we are always happy to offer advice
+              and guidance.
+            </p>
           </div>
-          <div class="services full-stack show">full stack</div>
-          <div class="services ai">ai</div>
+          <div class="service-section">
+            <div class="img-right-frame">
+              <img id="mobile-img" src="img/mobile.png" />
+            </div>
+            <div class="text-left-frame">
+              <h3>Mobile Development</h3>
+              <p>
+                Our team has a wealth of experience working with both start ups
+                and enterprise companies to bring innovative app ideas to life.
+                Our unique product design process helps ensure your mobile app
+                not only functions smoothly, but also stands out in a crowded
+                market. Let us put our expertise to work for you and bring your
+                app vision to fruition.
+              </p>
+            </div>
+          </div>
+          <div class="services-contact-section">
+            <button class="contact-button" onclick="onClickContactUs()">
+              Contact Us
+            </button>
+          </div>
+
+          <div class="service-section">
+            <div class="img-right-frame">
+              <img id="web-img" src="img/web.png" />
+            </div>
+            <div class="text-left-frame">
+              <h3>Custom Software</h3>
+              <p>
+                Let us help with all of your custom software needs, from
+                beautiful responsive front-ends to robust back-end systems. We
+                have experience working on everything from software
+                modernization projects for enterprise teams to rapid
+                construction of RESTful APIs. We use modern tools and techniques
+                to ensure top-notch performance and a top-quality product.
+                Contact us to see how we can help bring your custom software
+                project to the next level.
+              </p>
+            </div>
+          </div>
+          <div class="services-contact-section">
+            <button class="contact-button" onclick="onClickContactUs()">
+              Contact Us
+            </button>
+          </div>
+
+          <div class="service-section">
+            <div class="img-right-frame">
+              <img id="cloud-img" src="img/cloud.png" alt="" />
+            </div>
+            <div class="text-left-frame">
+              <h3>Cloud Architecture</h3>
+              <p>
+                We have extensive experience with cloud architecture, including
+                both traditional and serverless approaches on AWS. We can help
+                you smoothly transition to the cloud, or even move from one
+                cloud provider to another. Don't let the prospect of cloud
+                migration be daunting - let us handle it for you. Our focus is
+                on helping you get the most out of the cloud, so you can focus
+                on what you do best.
+              </p>
+            </div>
+          </div>
+          <div class="services-contact-section">
+            <button class="contact-button" onclick="onClickContactUs()">
+              Contact Us
+            </button>
+          </div>
+
+          <div class="service-section">
+            <div class="img-right-frame">
+              <img id="ai-img" src="img/ai.png" alt="" />
+            </div>
+            <div class="text-left-frame">
+              <h3>Applied AI</h3>
+              <p>
+                Artificial intelligence is changing the world, and our team can
+                help you leverage its power in your software. Our experienced
+                developers are familiar with a range of AI tools and techniques
+                that can save you time and money, or even enable you to do
+                things that were previously impossible. Don't be intimidated by
+                AI - let us help you harness its potential and take your
+                software to the next level.
+              </p>
+            </div>
+          </div>
+          <div class="services-contact-section">
+            <button class="contact-button" onclick="onClickContactUs()">
+              Contact Us
+            </button>
+          </div>
         </div>
-        <div class="tab contact">
+        <div class="tab contact" id="contact-tab">
           <form
+            id="contact-form"
             class="contact2-form"
             action="https://example.com/your@email.com"
             method="POST"
@@ -152,7 +254,7 @@
               <textarea class="input2" id="msg" name="user_message"></textarea>
               <span class="focus-input2" data-placeholder="MESSAGE"></span>
             </div>
-            <button type="submit">Send your message</button>
+            <button type="submit">Submit</button>
             <input type="hidden" name="_next" value="/thank-you" />
             <input
               type="hidden"

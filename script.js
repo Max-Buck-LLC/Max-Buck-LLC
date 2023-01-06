@@ -9,6 +9,8 @@ let lightPhotos = [2, 3, 4];
   setColorHoverListener();
   setPhoto();
 
+  setCollapsibleEventListener();
+
   setInterval(() => {
     setRandomLinkColor();
   }, 5000);
@@ -16,11 +18,27 @@ let lightPhotos = [2, 3, 4];
 
 /* Dark Mode */
 
+function changeServicePictures() {
+  let darkMode = document.body.classList.contains("dark-mode");
+  if (darkMode) {
+    document.getElementById("web-img").src = "./img/web.png";
+    document.getElementById("mobile-img").src = "./img/mobile.png";
+    document.getElementById("ai-img").src = "./img/ai.png";
+    document.getElementById("cloud-img").src = "./img/cloud.png";
+  } else {
+    document.getElementById("web-img").src = "./img/web-black.png";
+    document.getElementById("mobile-img").src = "./img/mobile-black.png";
+    document.getElementById("ai-img").src = "./img/ai-black.png";
+    document.getElementById("cloud-img").src = "./img/cloud-black.png";
+  }
+}
+
 function setModeEventListener() {
   let list = document.body.classList;
   document.getElementById("toggler").addEventListener("change", (event) => {
     event.target.checked ? list.add("dark-mode") : list.remove("dark-mode");
     setPhoto();
+    changeServicePictures();
   });
 }
 
@@ -83,4 +101,38 @@ function off() {
   Array.from(document.getElementsByClassName("tab")).forEach((e) => {
     e.classList.remove("show");
   });
+}
+
+/* Collapsible */
+
+function setCollapsibleEventListener() {
+  let coll = document.getElementsByClassName("collapsible");
+  let i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+
+      let content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+        this.innerHTML = this.innerHTML.replace("▲", "▼");
+        this.firstElementChild.innerHTML = this.classList.contains("active");
+      } else {
+        content.style.display = "block";
+        this.innerHTML = this.innerHTML.replace("▼", "▲");
+      }
+    });
+  }
+}
+
+/* Contact Us */
+
+function onClickContactUs(message = "") {
+  /* Toggle the contact tab */
+  let contactUsButton = document.getElementById("contact");
+  contactUsButton.click();
+  let msg_text_area = document.getElementById("msg");
+  msg_text_area.value = message;
+  mst_text_area.click();
 }

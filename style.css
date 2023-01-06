@@ -29,6 +29,10 @@ textarea {
   font-family: "Open Sans", sans-serif;
 }
 
+p {
+  text-align: justify;
+}
+
 ::selection {
   background-color: var(--highlight);
   color: var(--off-black);
@@ -104,7 +108,7 @@ button:hover {
 
 .dark-mode-toggler {
   position: fixed;
-  top: 5px;
+  topcenter: 5px;
   right: 20px;
   z-index: 7;
 }
@@ -217,6 +221,50 @@ br {
   height: 100%;
 }
 
+.services-contact-section {
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  flex-wrap: nowrap;
+}
+
+.service-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.text-left-frame {
+  max-width: 514px;
+}
+
+.img-right-frame {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 0 10px 0;
+  overflow: hidden;
+}
+@media screen and (max-width: 500px) {
+  .img-right-frame {
+    flex-basis: 0;
+  }
+  p {
+    /*text-align: left;*/
+  }
+}
+.img-right-frame img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 100%;
+}
+
 .links {
   margin-top: 5px;
   margin-left: 20px;
@@ -274,4 +322,43 @@ br {
 
 .services.show {
   display: block;
+}
+
+.collapsible {
+  /*background-color: #777;
+
+  color: white;
+  */
+
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+}
+
+.active,
+.collapsible:hover {
+  /*background-color: #555;*/
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  /*background-color: #f1f1f1;*/
+}
+
+.contact-button {
+  /* should be on the right side of containing div */
+  position: relative;
+  right: 0;
+}
+
+.aside {
+  /* the background color and text color should be reversed compared to other sections, the text font family will be different */
+  border: 1px solid var(--gray);
+  /*font-family: "Roboto", sans-serif;*/
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.2em;
 }
