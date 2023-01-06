@@ -390,11 +390,7 @@ br {
 }
 @media (max-width: 600px) {
   #headshot-img {
-    float: none;
-    margin: 0 auto;
-    display: block;
-    justify-content: left;
-    align-items: left;
-    border-radius: 50%;
+    width: 100px;
+
   }
 }
