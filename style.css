@@ -108,22 +108,20 @@ button:hover {
 }
 
 .footer {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	padding: 0 20px;
-	background-color: var(--black);
-	color: var(--white);
-	font-size: 0.7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 0.7rem;
 }
 
 .footer-content {
-	max-width: 350;
+  max-width: 350;
 }
-
-	
 
 .dark-mode-toggler {
   position: fixed;
@@ -383,13 +381,20 @@ br {
 }
 
 #headshot-img {
-float: left; padding: 10x; margin: 1em 1em 1em 1em; border-radius: 50%; border-bottom-left-radius:0; width: 200px;
+  float: left;
+  padding: 10x;
+  margin: 1em 1em 1em 1em;
+  border-radius: 50%;
+  border-bottom-left-radius: 0;
+  width: 200px;
 }
-@media(max-width: 600px) {
-#headshot-img {
-float: none; margin: 0 auto; display: block; justify-content: left; align-items: left;
-border-radius: 50%;
+@media (max-width: 600px) {
+  #headshot-img {
+    float: none;
+    margin: 0 auto;
+    display: block;
+    justify-content: left;
+    align-items: left;
+    border-radius: 50%;
+  }
 }
-}
-
-
